@@ -1,0 +1,24 @@
+
+/* V7 — keep existing mobile floating-card formation; only move cards above photo */
+.cert-filters-v7{display:flex;flex-wrap:wrap;gap:8px;margin:-18px 0 20px}
+.cert-filter-v7{border:1px solid #28425d;background:rgba(255,255,255,.03);color:#8fa7be;border-radius:999px;padding:7px 12px;font:600 11px Inter,sans-serif;cursor:pointer}
+.cert-filter-v7:hover,.cert-filter-v7.active{border-color:#1685ff;background:#1685ff;color:#fff}
+.credly-card-v7{display:flex;align-items:center;gap:14px;margin-top:14px;padding:16px 20px;border:1px solid #28425d;border-radius:13px;background:rgba(255,255,255,.035);color:#dbe9f7;text-decoration:none}
+.credly-card-v7:hover{border-color:#1685ff}
+.credly-icon-v7{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:#102d4a;font-size:20px}
+.credly-card-v7 strong{display:block;font-size:14px}
+.credly-card-v7 small{display:block;color:#8298ae;font-size:11px;margin-top:2px}
+
+@media(max-width:620px){
+  /* Preserve the current card formation. Only force cards above the photo layer. */
+  .hero-visual .avatar-placeholder{z-index:1 !important}
+  .hero-visual .floating-card,
+  .hero-visual .card-a,
+  .hero-visual .card-b,
+  .hero-visual .card-c{z-index:20 !important}
+  .hero-visual .floating-card{position:absolute !important}
+  .hero-visual .card-a{top:8px !important;right:4px !important}
+  .hero-visual .card-b{top:70px !important;left:4px !important;bottom:auto !important}
+  .hero-visual .card-c{top:132px !important;right:4px !important;bottom:auto !important}
+  .hero-visual .avatar-placeholder{top:175px !important}
+}
