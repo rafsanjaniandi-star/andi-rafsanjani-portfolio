@@ -25,89 +25,24 @@ document.addEventListener('DOMContentLoaded',()=>{
  const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 
  const grid=document.querySelector('.cert-grid');
-
  if(grid){
   const section=document.querySelector('#certifications');
-
-  section?.querySelectorAll(
-    '.cert-filters-v7,.cert-filters,.credly-card-v7,.credly-link'
-  ).forEach(e=>e.remove());
-
+  section?.querySelectorAll('.cert-filters-v7,.cert-filters,.credly-card-v7,.credly-link').forEach(e=>e.remove());
   grid.innerHTML='';
-
-  const groups=[
-   {
-    name:'SECURITY & AWARENESS',
-    icon:'🛡️',
-    items:v8Certificates.filter(c=>c.group==='SECURITY & AWARENESS')
-   },
-   {
-    name:'NETWORKING',
-    icon:'🌐',
-    items:v8Certificates.filter(c=>c.group==='NETWORKING')
-   },
-   {
-    name:'TECHNOLOGY',
-    icon:'💻',
-    items:v8Certificates.filter(c=>c.group==='TECHNOLOGY')
-   },
-   {
-    name:'OTHER',
-    icon:'📱',
-    items:v8Certificates.filter(c=>c.group==='OTHER')
-   }
-  ];
-
-  groups.forEach(group=>{
-   const wrap=document.createElement('div');
-   wrap.className='cert-group-v9';
-
-   const title=document.createElement('h3');
-   title.className='cert-group-heading-v9';
-
-   const icon=document.createElement('span');
-   icon.className='cert-group-icon-v9';
-   icon.textContent=group.icon;
-
-   const label=document.createElement('span');
-   label.textContent=group.name;
-
-   title.append(icon,label);
-
-   const list=document.createElement('div');
-   list.className='cert-name-list-v9';
-
-   group.items.forEach(c=>{
-    const a=document.createElement('a');
-
-    a.className='cert-name-v9';
-    a.href=c.url;
-    a.target='_blank';
-    a.rel='noopener noreferrer';
-    a.textContent=c.name;
-
-    list.appendChild(a);
+  [...new Set(v8Certificates.map(c=>c.group))].forEach(group=>{
+   const wrap=document.createElement('div');wrap.className='cert-group-v8';
+   const title=document.createElement('div');title.className='cert-group-title-v8';title.textContent=group;wrap.appendChild(title);
+   const cards=document.createElement('div');cards.className='cert-group-cards-v8';
+   v8Certificates.filter(c=>c.group===group).forEach(c=>{
+    const a=document.createElement('a');a.className='cert-card-v8 reveal';a.href=c.url;a.target='_blank';a.rel='noopener';
+    a.innerHTML=`<span>${c.badge}</span><div><h3>${c.name}</h3><p>${c.issuer} · View certificate →</p></div>`;
+    cards.appendChild(a);
    });
-
-   wrap.append(title,list);
-   grid.appendChild(wrap);
+   wrap.appendChild(cards);grid.appendChild(wrap);
   });
-
-  const credly=document.createElement('a');
-
-  credly.className='credly-card-v8';
-  credly.href='https://www.credly.com/users/andi-rafsanjani';
-  credly.target='_blank';
-  credly.rel='noopener noreferrer';
-
-  credly.innerHTML=
-   '<span class="credly-icon-v8">🏆</span>'+
-   '<span>'+
-   '<strong>Credly Digital Badges</strong>'+
-   '<small>View my verified digital credentials →</small>'+
-   '</span>';
-
+  const credly=document.createElement('a');credly.className='credly-card-v8';credly.href='https://www.credly.com/users/andi-rafsanjani';credly.target='_blank';credly.rel='noopener';
+  credly.innerHTML='<span class="credly-icon-v8">🏆</span><span><strong>Credly Digital Badges</strong><small>View my verified digital credentials →</small></span>';
   grid.appendChild(credly);
-
   grid.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
  }
+});
