@@ -24,25 +24,5 @@ document.addEventListener('DOMContentLoaded',()=>{
  sections.forEach(s=>activeObserver.observe(s));
  const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 
- const grid=document.querySelector('.cert-grid');
- if(grid){
-  const section=document.querySelector('#certifications');
-  section?.querySelectorAll('.cert-filters-v7,.cert-filters,.credly-card-v7,.credly-link').forEach(e=>e.remove());
-  grid.innerHTML='';
-  [...new Set(v8Certificates.map(c=>c.group))].forEach(group=>{
-   const wrap=document.createElement('div');wrap.className='cert-group-v8';
-   const title=document.createElement('div');title.className='cert-group-title-v8';title.textContent=group;wrap.appendChild(title);
-   const cards=document.createElement('div');cards.className='cert-group-cards-v8';
-   v8Certificates.filter(c=>c.group===group).forEach(c=>{
-    const a=document.createElement('a');a.className='cert-card-v8 reveal';a.href=c.url;a.target='_blank';a.rel='noopener';
-    a.innerHTML=`<span>${c.badge}</span><div><h3>${c.name}</h3><p>${c.issuer} · View certificate →</p></div>`;
-    cards.appendChild(a);
-   });
-   wrap.appendChild(cards);grid.appendChild(wrap);
-  });
-  const credly=document.createElement('a');credly.className='credly-card-v8';credly.href='https://www.credly.com/users/andi-rafsanjani';credly.target='_blank';credly.rel='noopener';
-  credly.innerHTML='<span class="credly-icon-v8">🏆</span><span><strong>Credly Digital Badges</strong><small>View my verified digital credentials →</small></span>';
-  grid.appendChild(credly);
-  grid.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
- }
+
 });
