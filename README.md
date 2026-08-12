@@ -11,3 +11,5 @@ Static portfolio focused on Cloud Engineer / IT Infrastructure / IT Operations.
 
 ## Deploy
 No build step is required. Upload these files to GitHub, then connect the repository to Cloudflare Pages.
+
+Portfolio website — Cloud Engineer & IT Infrastructure
