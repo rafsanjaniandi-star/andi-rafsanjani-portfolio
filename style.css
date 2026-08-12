@@ -197,3 +197,21 @@ footer{background:#030912;color:#6e8299;padding:22px 7%;display:flex;justify-con
   }
 
 }
+
+/* Fix hero floating cards layering */
+.hero-visual {
+  z-index: 3;
+}
+
+.avatar-placeholder {
+  z-index: 1;
+}
+
+.floating-card {
+  z-index: 10;
+}
+
+.floating-card strong,
+.floating-card small {
+  white-space: nowrap;
+}
