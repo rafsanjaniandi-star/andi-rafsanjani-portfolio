@@ -89,3 +89,9 @@ footer{background:#030912;color:#6e8299;padding:22px 7%;display:flex;justify-con
 .project-note{margin-top:22px;padding:16px 18px;border-left:3px solid #2c90f5;background:#eaf4ff;color:#607188;font-size:11px}
 .project-note strong{color:#18314d}
 @media(max-width:700px){.case-grid{grid-template-columns:1fr}.case-card.featured{grid-column:auto}.case-flow{grid-template-columns:1fr}}
+
+/* V4 recruiter-focused polish */
+.focus-line{display:flex;gap:24px;align-items:center;margin-top:28px;padding:18px 0;border-top:1px solid rgba(255,255,255,.09)}
+.focus-line span{font-size:9px;font-weight:800;letter-spacing:.13em;color:#58aefc;white-space:nowrap}
+.focus-line p{margin:0;font-size:11px;color:#93a7bb;line-height:1.7}
+@media(max-width:700px){.focus-line{display:block}.focus-line p{margin-top:8px}}

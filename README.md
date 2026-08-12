@@ -1,15 +1,18 @@
-# Andi Rafsanjani — Portfolio V2
+# Andi Rafsanjani — Portfolio
 
-Static portfolio focused on Cloud Engineer / IT Infrastructure / IT Operations.
+Personal portfolio for Cloud Engineering, IT Infrastructure and IT Operations.
 
-## Later
-- Replace profile photo placeholder with the real photo.
-- Add CV PDF and connect the Download CV button.
-- Replace project placeholders with real project screenshots/details.
-- Verify dates/details against the latest CV.
-- Add official certification verification links.
+## Current version
+V4 — recruiter-focused About, Experience, Skills and Projects.
 
-## Deploy
-No build step is required. Upload these files to GitHub, then connect the repository to Cloudflare Pages.
+## Files
+- `index.html` — main page
+- `style.css` — styling
+- `script.js` — interactions
+- `assets/` — future screenshots / evidence
+- `wrangler.jsonc` — Cloudflare Workers static assets configuration
 
-Portfolio website — Cloud Engineer & IT Infrastructure
+## Update workflow
+1. Replace/edit files in this repository.
+2. Commit changes to `main`.
+3. Cloudflare Workers Builds automatically deploys the latest commit.
