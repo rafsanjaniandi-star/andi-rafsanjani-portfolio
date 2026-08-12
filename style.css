@@ -56,7 +56,7 @@ footer{background:#030912;color:#6e8299;padding:22px 7%;display:flex;justify-con
 }
 @media(max-width:620px){
  .section{padding:80px 5%}.site-header{padding:0 5%}.hero{padding-top:120px}.hero h2{font-size:17px}h1{font-size:52px}
- .hero-visual{height:470px}.avatar-placeholder{width:275px;height:370px}.orb-a{width:390px;height:390px}.orb-b{width:500px;height:500px}.floating-card{min-width:160px;padding:9px}..floating-card small{font-size:9px}.card-a{top:250px;right:-5px}.card-b{left:-5px}
+ .hero-visual{height:470px}.avatar-placeholder{width:275px;height:370px}.orb-a{width:390px;height:390px}.orb-b{width:500px;height:500px}.floating-card{min-width:160px;padding:9px}..floating-card small{font-size:9px}.card-a{right:-15px}.card-b{left:-5px}
  .skill-grid,.cert-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:8px}.education-card{display:block}.education-card>strong{display:block;margin-top:20px}.contact-card{padding:35px 25px}.contact-card h2,.section-heading h2{font-size:37px}
  footer{flex-direction:column;gap:8px}
 }
