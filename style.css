@@ -110,3 +110,90 @@ footer{background:#030912;color:#6e8299;padding:22px 7%;display:flex;justify-con
 .avatar-placeholder:before {
   z-index: 1;
 }
+
+/* V9 — Certifications only */
+
+#certifications .cert-grid {
+  display: block;
+}
+
+#certifications .cert-group-v9 {
+  margin: 0 0 30px;
+}
+
+#certifications .cert-group-heading-v9 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+#certifications .cert-group-icon-v9 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#certifications .cert-name-list-v9 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0;
+  padding: 0 0 0 34px;
+}
+
+#certifications .cert-name-v9 {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid rgba(120,185,244,.16);
+  border-radius: 9px;
+  background: rgba(255,255,255,.025);
+  color: inherit;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.35;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+#certifications .cert-name-v9:hover {
+  transform: translateY(-2px);
+  border-color: rgba(22,133,255,.55);
+  background: rgba(22,133,255,.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+@media (max-width:620px) {
+
+  #certifications .cert-group-v9 {
+    margin-bottom: 26px;
+  }
+
+  #certifications .cert-name-list-v9 {
+    padding-left: 0;
+  }
+
+  #certifications .cert-name-v9 {
+    width: 100%;
+  }
+
+}
