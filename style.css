@@ -215,3 +215,92 @@ footer{background:#030912;color:#6e8299;padding:22px 7%;display:flex;justify-con
 .floating-card small {
   white-space: nowrap;
 }
+
+/* Container Utama Timeline */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid #e0e0e0; /* Garis timeline utama */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Titik Bullet Timeline */
+.timeline-dot {
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0a66c2; /* Warna khas LinkedIn */
+}
+
+.timeline-meta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a66c2;
+  margin-bottom: 6px;
+}
+
+/* Detail Perusahaan & Sub-role */
+.company-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+}
+
+.company-sub {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 2px 0 16px 0;
+}
+
+/* Sub-roles styling */
+.role-group {
+  margin-top: 15px;
+  padding-left: 12px;
+  border-left: 2px solid #eee; /* Garis cabang sub-role */
+}
+
+.role-item {
+  margin-bottom: 20px;
+}
+
+.role-header h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.role-meta {
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+  margin-top: 2px;
+}
+
+.project-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #444;
+  margin: 4px 0 8px 0;
+}
+
+.role-item ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.role-item li {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
